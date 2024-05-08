@@ -5,6 +5,7 @@ import 'package:portfolioproject/Pages/projectOns.dart';
 import 'package:portfolioproject/Pages/skillOns.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:open_filex/open_filex.dart';
 
 // ignore: camel_case_types
 class infohadrich extends StatefulWidget {
@@ -419,12 +420,7 @@ class _infohadrichState extends State<infohadrich> {
   }
 
   Future<void> _launchPDF() async {
-    const url = 'assets/pdfs/CVONSHADRICH.pdf'; // Replace with your PDF URL
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
+    OpenFile.open("assets/pdfs/CVONSHADRICH.pdf");
   }
 
   _launchLinkedIn() async {
