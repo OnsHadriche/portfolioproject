@@ -420,7 +420,7 @@ class _infohadrichState extends State<infohadrich> {
   }
 
   Future<void> _launchPDF() async {
-    OpenFile.open("assets/pdfs/CVONSHADRICH.pdf");
+    OpenFilex.open("assets/pdfs/CVONSHADRICH.pdf");
   }
 
   _launchLinkedIn() async {
